@@ -1,0 +1,10 @@
+html, body {
+    font-family: 'Teko', sans-serif !important;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}

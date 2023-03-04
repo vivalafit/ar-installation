@@ -1,0 +1,28 @@
+{
+    "name": "ar-installation",
+    "version": "0.1.0",
+    "description": "Ar installation Proof of Concept for local demo.",
+    "main": "server.js",
+    "scripts": {
+      "test": "test"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/vivalafit/ar-installation.git"
+    },
+    "keywords": [
+      "chat",
+      "dnd",
+      "cyberpunk"
+    ],
+    "author": "Max Navrotsky",
+    "license": "ISC",
+    "dependencies": {
+      "cors": "^2.8.5",
+      "ejs": "^3.1.3",
+      "express": "^4.17.1",
+      "peer": "^0.5.3",
+      "peerjs": "^1.3.1"
+    }
+  }
+  
