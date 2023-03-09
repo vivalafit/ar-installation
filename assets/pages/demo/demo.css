@@ -7,4 +7,21 @@ html, body {
     display: flex;
     align-items: center;
     margin-left: 100px;
+    flex-wrap: wrap;
+}
+
+.canvas-place {
+    height: 500px;
+    width: 500px; 
+    position: relative;
+    overflow: hidden;
+}
+
+video, canvas {
+    width: 700px !important;
+    height: 700px !important;
+}
+
+.main h1 {
+   width: 100%;
 }
