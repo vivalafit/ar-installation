@@ -6,7 +6,7 @@ html, body {
     height: 100vh;
     display: flex;
     align-items: center;
-    margin-left: 100px;
+    margin-left: 50px;
     flex-wrap: wrap;
 }
 
@@ -24,4 +24,15 @@ video, canvas {
 
 .main h1 {
    width: 100%;
+}
+
+.left, .right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 49%;
+}
+
+.right {
+    margin-left: 20px;
 }
