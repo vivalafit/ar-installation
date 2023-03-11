@@ -41,4 +41,11 @@ video, canvas {
     .left, .right {
         width: 100%;
     }
+    .right {
+        margin-left: 0px;
+    }
+    video, canvas {
+        width: 1200px !important;
+        height: 700px !important;
+    }
 }
