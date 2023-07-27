@@ -1,0 +1,15 @@
+html, body {
+    font-family: 'Teko', sans-serif !important;
+}
+body {
+    overflow: hidden;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}

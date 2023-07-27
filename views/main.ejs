@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>AR demka</title>
+   <!-- TODO: add css reset for style purpose -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   <link rel="stylesheet" href="pages/main/main.css">
+   <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="main tutorial">
+      <img class="menu-icon" src="/icons/menu-icon.svg" alt="">
+      <img class="back-icon hidden" src="/icons/back-icon.svg" alt="">
+      <div class="main-content">
+         <img class="tutorial-arrow tutorial-2" src="/icons/tutorial-arrow-2.svg" alt="">
+         <div class="main-tutorial-text tutorial-2">Інформація про художників</div>
+         <div class="lower-tutorial-text tutorial-2"><b>ОК</b></div>
+         <!-- tutorial stuff -->
+         <div class="upper-tutorial-text tutorial-1">Щоб побачити <b>ПОЛЕ</b> наведіться на зображення</div>
+         <div class="lower-tutorial-text tutorial-1"><b>ОК</b></div>
+         <img class="camera-icon tutorial tutorial-1" src="/icons/square.svg" alt="">
+          <!-- tutorial stuff -->
+         <div class="camera-block">
+            <div class="canvas-place"></div>
+         </div>
+      </div>
+      <div class="menu hidden">
+         <!-- <img class="menu-bg" src="/images/background.png" alt=""> -->
+         <div class="menu-points">
+            <div class="menu-point"><a href="/concepts">Концепція</a></div>
+            <div class="menu-point"><a href="/participants">Учасники</a></div>
+         </div>
+         <img src="" alt="">
+      </div>
+   </div>
+   <script src="libs/jquery-3.5.1.min.js"></script>
+   <!-- include three.js library -->
+   <script src="libs/three.js"></script>
+   <!-- include jsartookit -->
+   <script src="libs/artoolkit.min.js"></script>
+   <script src="libs/artoolkit.api.js"></script>
+   <!-- include threex.artoolkit -->
+   <script src="libs/threex-artoolkitsource.js"></script>
+   <script src="libs/threex-artoolkitcontext.js"></script>
+   <script src="libs/threex-arbasecontrols.js"></script>
+   <script src="libs/threex-armarkercontrols.js"></script>
+   <!-- page -->
+   <script src="pages/main/ar-camera.js"></script>
+   <script src="pages/main/main.js"></script>
+</body>
+</html>

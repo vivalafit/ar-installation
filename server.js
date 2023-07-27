@@ -7,7 +7,15 @@ app.set('view engine', 'ejs')
 app.use(express.static('assets'))
 
 app.get('/', (req, res) => {
-  res.render('demo', { roomId: req.params.room })
+  res.render('main');
+})
+
+app.get('/participants', (req, res) => {
+  res.render('participants');
+})
+
+app.get('/concepts', (req, res) => {
+  res.render('concepts');
 })
 
 server.listen(process.env.PORT|| 3000)

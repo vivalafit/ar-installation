@@ -24,7 +24,8 @@ function initialize()
 		alpha: true
 	});
 	renderer.setClearColor(new THREE.Color('lightgrey'), 0)
-	renderer.setSize( 640, 480 );
+	//TODO: keep an eye on that one.
+	renderer.setSize( 100, 100 );
 
 	//append it elsewhere
 	document.getElementsByClassName("canvas-place")[0].appendChild(renderer.domElement);
@@ -98,7 +99,6 @@ function initialize()
 	markerRoot1.add( mesh1 );
 }
 
-
 function update()
 {
 	if($(".canvas-place video").length === 0 && $("video").length > 0) {
@@ -109,12 +109,10 @@ function update()
 		arToolkitContext.update( arToolkitSource.domElement );
 }
 
-
 function render()
 {
 	renderer.render( scene, camera );
 }
-
 
 function animate()
 {
