@@ -13,9 +13,21 @@ body {
 }
 
 .canvas-place {
+    overflow: hidden;
     height: 100vh;
-    width: 100vh; 
+    width: 100%; 
     position: relative;
+}
+
+.canvas-place canvas {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    margin: unset !important;
+}
+
+.canvas-place video {
+    position: relative !important;
 }
 
 .main h1 {
@@ -39,39 +51,22 @@ body {
 }
  
 /* TUTORIAL SECTION */
-.camera-icon.tutorial {
-    background: rgb(255 255 255 / 25%);
-}
 
 .main.tutorial {
-    background: rgb(0 0 0 / 80%);
+    background: rgb(0 0 0 / 40%);
 }
 
 .upper-tutorial-text {
-    position: absolute;
     color: white;
-    left: 50%;
-    top: 32%;
-    transform: translate(-50%, -32%);
     text-align: center;
     font-size: 11px;
     z-index: 15;
+    margin-bottom: 17px;
 }
 
-.tutorial-arrow.tutorial-2 {
-    position: absolute;
-    top: 5%;
-    left: 25%;
-    z-index: 15;
-    background: rgb(0 0 0 / 0%);
-}
 
 .lower-tutorial-text {
-    position: absolute;
     color: white;
-    left: 50%;
-    top: 62%;
-    transform: translate(-50%, 62%);
     background-color: #505050;
     width: 72px;
     height: 30px;
@@ -80,31 +75,46 @@ body {
     padding-top: 7px;
     border-radius: 30px;
     z-index: 15;
+    cursor: pointer;
+}
+
+.tutorial-arrow {
+    top: 9%;
+    left: 26%;
+    scale: 1.3;
+    position: absolute;
+}
+
+.tutorial-1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
 }
 
 .tutorial-2 {
     display: none;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
 }
 
 .main-tutorial-text {
-    position: absolute;
     color: white;
-    left: 50%;
-    top: 35%;
-    transform: translate(-50%, 35%);
-    background-color: #505050;
     width: 175px;
-    height: 55px;
     text-align: center;
     font-size: 11px;
-    padding-top: 20px;
-    border-radius: 15px;
     z-index: 15;
-}
-
-.lower-tutorial-text.tutorial-2 {
-    top: 47%;
-    transform: translate(-50%, 47%);
+    margin-bottom: 21px;
 }
 
 .menu {
