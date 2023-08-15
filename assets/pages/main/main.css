@@ -126,10 +126,6 @@ body {
     width: 100vh;
 }
 
-.hidden {
-    display: none;
-}
-
 .menu-points {
     flex-direction: column;
     height: 100vh;
