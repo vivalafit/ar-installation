@@ -18,4 +18,8 @@ app.get('/concepts', (req, res) => {
   res.render('concepts');
 })
 
+app.get('/tests', (req, res) => {
+  res.render('tests');
+})
+
 server.listen(process.env.PORT|| 3000)
