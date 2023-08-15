@@ -6,11 +6,25 @@ var markerRoot1;
 
 var mesh1;
 
+//TODO: fix here - https://poletracker.atlassian.net/jira/software/projects/POLE/boards/1?selectedIssue=POLE-31
+// function startCamera () {
+// 	console.log("scene:", scene)
+// 	if (scene === undefined) {
+// 		initialize();
+// 		animate();
+// 	}
+// }
+
+//TODO: try this
+// window.onpopstate = () => {
+// 	navigate("/");
+// }
+
 initialize();
 animate();
 
 function initialize()
-{
+{	
 	scene = new THREE.Scene();
 
 	let ambientLight = new THREE.AmbientLight( 0xcccccc, 0.5 );
