@@ -1523,6 +1523,7 @@
 	var multi_marker_count = 0;
 
 	function addMultiMarker(arId, url, callback) {
+		console.log("TEST:")
 		var filename = '/multi_marker_' + multi_marker_count++;
 		ajax(url, filename, function(bytes) {
 			var files = parseMultiFile(bytes);
@@ -1537,6 +1538,7 @@
 
 			var path = url.split('/').slice(0, -1).join('/')
 			files = files.map(function(file) {
+				console.log("FILE:", file)
 				// FIXME super kludge - remove it
 				// console.assert(file !== '')
 				if( file === 'patt.hiro' || file === 'patt.kanji' || file === 'patt2.hiro' || file === 'patt2.kanji' ){

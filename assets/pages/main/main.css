@@ -150,8 +150,8 @@ body {
     padding-top: 7px;
 }
 
-.menu-point:last-child {
-    margin-top: 20px;
+.menu-point {
+    margin-bottom: 20px;
 }
 
 a {
