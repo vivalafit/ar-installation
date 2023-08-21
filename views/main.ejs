@@ -3,6 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
    <title>AR demka</title>
    <!-- TODO: add css reset for style purpose -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -10,40 +11,50 @@
    <link rel="stylesheet" href="pages/main/main.css">
    <link rel="stylesheet" href="styles/global.css">
    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+   <!-- working combo -->
+   <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+   <script src="libs/aframe-ar.js"></script> 
 </head>
 <body>
-   <div class="main tutorial">
+  <a-scene embedded arjs='sourceType: webcam;'>
+    <a-marker type='pattern' url='data/n.patt'>
+      <!-- <video id="gepard-running" autoplay loop="true" muted src="gifs/tiger-nigger.mp4"></video> -->
+      <!-- <a-video src="gifs/tiger-nigger.mp4" playsinline webkit-playsinline width="3" height="1.5" repeat="true"></a-video> -->
+      <a-video src="gifs/tiger-nigger.mp4" width="3" height="1.5"  autoplay loop="true" muted playsinline webkit-playsinline></a-video>
+      <!-- <a-box position='0 0.5 0' material='color: blue;'></a-box> -->
+    </a-marker>
+
+      <!-- handle marker with your own pattern -->
+      <a-marker type='pattern' url='data/pattern-python.patt'>
+        <a-image src="images/hero.jpeg" width="3" height="1.5"></a-image>
+      </a-marker>
+  
+      <!-- handle marker with hiro preset -->
+      <a-marker preset='hiro'>
+        <a-box position='0 0.5 0' material='color: green;'></a-box>
+      </a-marker>
+  
+      <!-- add a simple camera -->
+      <a-entity camera></a-entity>
+    </a-scene>
+    <div class="main tutorial">
       <%- include ('./partials/menu') %>
       <div class="main-content">
-         <div class="tutorial-2 hidden">
+        <div class="tutorial-2 hidden">
             <img class="tutorial-arrow" src="/icons/tutorial-arrow-2.svg" alt="">
             <div class="main-tutorial-text">Інформація про художників</div>
             <div class="lower-tutorial-text"><b>ОК</b></div>
-         </div>
-         <!-- tutorial stuff -->
-         <div class="tutorial-1">
+        </div>
+        <!-- tutorial stuff -->
+        <div class="tutorial-1">
             <div class="upper-tutorial-text">Щоб побачити <b>ПОЛЕ</b> наведіться на зображення</div>
             <div class="lower-tutorial-text"><b>ОК</b></div>
-         </div>
+        </div>
           <!-- tutorial stuff -->
-         <div class="camera-block">
-            <div class="canvas-place"></div>
-         </div>
       </div>
-   </div>
+  </div>
+   <!-- libs -->
    <script src="libs/jquery-3.5.1.min.js"></script>
-   <!-- include three.js library -->
-   <script src="libs/three.js"></script>
-   <!-- include jsartookit -->
-   <script src="libs/artoolkit.min.js"></script>
-   <script src="libs/artoolkit.api.js"></script>
-   <!-- include threex.artoolkit -->
-   <script src="libs/threex-artoolkitsource.js"></script>
-   <script src="libs/threex-artoolkitcontext.js"></script>
-   <script src="libs/threex-arbasecontrols.js"></script>
-   <script src="libs/threex-armarkercontrols.js"></script>
-   <!-- page -->
-   <script src="pages/main/ar-camera.js" defer></script>
    <script src="pages/main/main.js" defer></script>
 </body>
 </html>

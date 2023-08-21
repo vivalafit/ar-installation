@@ -3,6 +3,9 @@ html, body {
 }
 body {
     overflow: hidden;
+    height: 100vh !important;
+    width: 100% !important;
+    margin: unset !important;
 }
 
 .main {
@@ -94,6 +97,7 @@ body {
     min-height: 100vh;
     width: 100%;
     flex-direction: column;
+    top: 0;
 }
 
 .tutorial-2 {
@@ -106,6 +110,7 @@ body {
     min-height: 100vh;
     width: 100%;
     flex-direction: column;
+    top: 0;
 }
 
 .main-tutorial-text {
@@ -156,6 +161,11 @@ body {
 
 a {
     color: unset;
+}
+
+/* ar-scenes tests */
+a-scene {
+    position: absolute !important;
 }
 
 /* мені стало різко похуй на мобайл, бо я одразу почав робити розмітку для мобільних :) */
