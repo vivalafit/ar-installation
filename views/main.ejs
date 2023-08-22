@@ -3,7 +3,6 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
    <title>AR demka</title>
    <!-- TODO: add css reset for style purpose -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -17,16 +16,24 @@
 </head>
 <body>
   <a-scene embedded arjs='sourceType: webcam;'>
+    <a-assets>
+	    <video id="penguin-sledding" autoplay loop="true" muted="true" src="gifs/tiger-nigger.mp4"></video>
+	  </a-assets>
     <a-marker type='pattern' url='data/n.patt'>
-      <!-- <video id="gepard-running" autoplay loop="true" muted src="gifs/tiger-nigger.mp4"></video> -->
+      <!-- <video id="gepard-running" src="gifs/tiger-nigger.mp4" preload="auto"  autoplay loop="true"  crossOrigin="anonymous" muted></video> -->
       <!-- <a-video src="gifs/tiger-nigger.mp4" playsinline webkit-playsinline width="3" height="1.5" repeat="true"></a-video> -->
-      <a-video src="gifs/tiger-nigger.mp4" width="3" height="1.5"  autoplay loop="true" muted playsinline webkit-playsinline></a-video>
+      <!-- <a-video src="gifs/tiger-nigger.mp4" width="3" height="1.5"  autoplay loop="true" muted playsinline webkit-playsinline></a-video> -->
       <!-- <a-box position='0 0.5 0' material='color: blue;'></a-box> -->
+      <!-- <a-image src="gifs/cat.gif"></a-image> -->
+      <!-- <a-entity position="0 2 -4" rotation="0 25 0" geometry="primitive:box;" material="shader:gif;src:url(https://media0.giphy.com/media/xT9IgsOaEG15pWz17y/giphy.gif)"></a-entity> -->
+      <!-- <a-entity geometry="primitive: plane;" material="shader:gif;src:url(https://media0.giphy.com/media/xT9IgsOaEG15pWz17y/giphy.gif)"></a-entity> -->
+     <a-video src="#penguin-sledding" position="0 0.5 0" rotation="270 0 0" play="true"></a-video>
     </a-marker>
 
       <!-- handle marker with your own pattern -->
       <a-marker type='pattern' url='data/pattern-python.patt'>
-        <a-image src="images/hero.jpeg" width="3" height="1.5"></a-image>
+        <!-- <a-image src="images/hero.jpeg" width="3" height="1.5"></a-image> -->
+        <a-box position='0 0.5 0' material='color: red;'></a-box>
       </a-marker>
   
       <!-- handle marker with hiro preset -->
@@ -53,6 +60,12 @@
           <!-- tutorial stuff -->
       </div>
   </div>
+  <script>
+    window.addEventListener('click', function () {
+    var v = document.querySelector('#penguin-sledding');
+    v.play();
+    });
+  </script>
    <!-- libs -->
    <script src="libs/jquery-3.5.1.min.js"></script>
    <script src="pages/main/main.js" defer></script>
