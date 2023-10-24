@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
     hardResetPage();
     initHandlers();
 });
@@ -23,14 +23,6 @@ const initHandlers = () => {
     $(document.body).on("click", '.tutorial-2 .lower-tutorial-text', function() { 
         finishTutorial();
     });
-    $(document.body).on("click", ".menu-icon", function() {
-        $(".main-content, .menu-icon").addClass("hidden");
-        $(".menu, .back-icon").removeClass("hidden");
-    })
-    $(document.body).on("click", ".back-icon", function() {
-        $(".main-content, .menu-icon").removeClass("hidden");
-        $(".menu, .back-icon").addClass("hidden");
-    })
 }
 
 const showNextTutorialStep = () => {

@@ -45,14 +45,6 @@ body {
 }
 
 
-.menu-icon, .back-icon {
-    top: 5%;
-    left: 8%;
-    z-index: 15;
-    position: absolute;
-    scale: 1.5;
-}
- 
 /* TUTORIAL SECTION */
 
 .main.tutorial {
@@ -120,43 +112,6 @@ body {
     font-size: 11px;
     z-index: 15;
     margin-bottom: 21px;
-}
-
-.menu {
-    position: relative;
-    background-image: url("../../images/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vh;
-}
-
-.menu-points {
-    flex-direction: column;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.menu-point {
-    width: 147px;
-    height: 33px;
-    border-radius: 6px;
-    background: #504e4e7a;
-    
-    color: #fff;
-    text-align: center;
-    font-size: 15.169px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding-top: 7px;
-}
-
-.menu-point:last-child {
-    margin-top: 20px;
 }
 
 a {
